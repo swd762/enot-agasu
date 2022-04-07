@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>MOD_SPECIAL_VISUALLY</name>
+	<creationDate>Июнь 2021</creationDate>
+	<author>А.П.В.</author>
+	<authorEmail>info@blog-about.ru</authorEmail>
+	<authorUrl>https://blog-about.ru/</authorUrl>
+	<copyright>Copyright(C) 2016 Module Special Visually</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<version>0.4.1</version>
+	<description>MOD_SPECIAL_VISUALLY_XML_DESCRIPTION</description>
+	
+	<scriptfile>script.install.php</scriptfile>
+	
+	<files>
+		<filename module="mod_special_visually">mod_special_visually.php</filename>
+		<filename>mod_special_visually.xml</filename>
+		<filename>CHANGELOG.txt</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<!-- Основные параметры для модуля -->
+			<fieldset name="basic">
+				<field name="type_original_button" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_ORIGINAL_BUTTON" description="MOD_SPECIAL_VISUALLY_TYPE_ORIGINAL_BUTTON_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_TEXT</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_IMAGE</option>
+				</field>
+				<field name="text_original" type="text" label="MOD_SPECIAL_VISUALLY_TEXT_ORIGINAL" description="MOD_SPECIAL_VISUALLY_TEXT_ORIGINAL_DESC" default="Оригинальная версия" />
+				<field name="image_original" type="media" label="MOD_SPECIAL_VISUALLY_IMAGE_ORIGINAL" description="MOD_SPECIAL_VISUALLY_IMAGE_ORIGINAL_DESC" preview="true" preview_width="50" preview_height="50" />
+				
+				<field name="type_special_button" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_SPECIAL_BUTTON" description="MOD_SPECIAL_VISUALLY_TYPE_SPECIAL_BUTTON_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_TEXT</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_IMAGE</option>
+				</field>
+				<field name="text_special" type="text" label="MOD_SPECIAL_VISUALLY_TEXT_SPECIAL" description="MOD_SPECIAL_VISUALLY_TEXT_SPECIAL_DESC" default="Версия для слабовидящих" />
+				<field name="image_special" type="media" label="MOD_SPECIAL_VISUALLY_IMAGE_SPECIAL" description="MOD_SPECIAL_VISUALLY_IMAGE_SPECIAL_DESC" preview="true" preview_width="50" preview_height="50" />
+				
+				<field name="type_reset_button" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_RESET_BUTTON" description="MOD_SPECIAL_VISUALLY_TYPE_RESET_BUTTON_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_DISABLE</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_TEXT</option>
+					<option value="2">MOD_SPECIAL_VISUALLY_TYPE_BUTTON_IMAGE</option>
+				</field>
+				<field name="text_reset" type="text" label="MOD_SPECIAL_VISUALLY_TEXT_RESET" description="MOD_SPECIAL_VISUALLY_TEXT_RESET_DESC" default="Сброс" />
+				<field name="image_reset" type="media" label="MOD_SPECIAL_VISUALLY_IMAGE_RESET" description="MOD_SPECIAL_VISUALLY_IMAGE_RESET_DESC" preview="true" preview_width="50" preview_height="50" />
+				
+				<field name="type_orientation" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_ORIENTATION" description="MOD_SPECIAL_VISUALLY_TYPE_ORIENTATION_DESC" default="vertical">
+					<option value="vertical">MOD_SPECIAL_VISUALLY_TYPE_ORIENTATION_VERTICAL</option>
+					<option value="horizontal">MOD_SPECIAL_VISUALLY_TYPE_ORIENTATION_HORIZONTAL</option>
+				</field>
+				
+				<field name="module_position" type="radio" label="MOD_SPECIAL_VISUALLY_MODULE_POSITION" description="MOD_SPECIAL_VISUALLY_MODULE_POSITION_DESC" default="default">
+					<option value="default">MOD_SPECIAL_VISUALLY_MODULE_POSITION_DEFAULT</option>
+					<option value="topfixed">MOD_SPECIAL_VISUALLY_MODULE_POSITION_TOP_FIXED</option>
+					<option value="bottomfixed">MOD_SPECIAL_VISUALLY_MODULE_POSITION_BOTTOM_FIXED</option>
+				</field>
+				<field name="note14" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_MODULE_POSITION" description="MOD_SPECIAL_VISUALLY_MODULE_POSITION_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры шрифтов -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_FONT">
+				<field name="change_font" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_FONT" description="MOD_SPECIAL_VISUALLY_CHANGE_FONT_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="font_default" type="text" label="MOD_SPECIAL_VISUALLY_FONT_DEFAULT" description="MOD_SPECIAL_VISUALLY_FONT_DEFAULT_DESC" default="24px" />
+				<field name="list_font" type="repeatable" icon="list" label="MOD_SPECIAL_VISUALLY_LIST_FONT" description="MOD_SPECIAL_VISUALLY_LIST_FONT_DESC">
+					<fieldset hidden="true" name="list_font_modal" repeat="true">
+						<field name="size_font" type="text" label="MOD_SPECIAL_VISUALLY_SIZE_FONT" description="MOD_SPECIAL_VISUALLY_SIZE_FONT_DESC" default="20px" />
+					</fieldset>
+				</field>
+				<field name="note1" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_FONT" description="MOD_SPECIAL_VISUALLY_CHANGE_FONT_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры цветовой схемы -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_COLOR">
+				<field name="change_color" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_COLOR" description="MOD_SPECIAL_VISUALLY_CHANGE_COLOR_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bg_color_default" type="color" label="MOD_SPECIAL_VISUALLY_BG_COLOR_DEFAULT" description="MOD_SPECIAL_VISUALLY_BG_COLOR_DEFAULT_DESC" default="#fff" />
+				<field name="text_color_default" type="color" label="MOD_SPECIAL_VISUALLY_TEXT_DEFAULT" description="MOD_SPECIAL_VISUALLY_TEXT_DEFAULT_DESC" default="#000" />
+				<field name="list_color" type="repeatable" icon="list" label="MOD_SPECIAL_VISUALLY_LIST_COLOR" description="MOD_SPECIAL_VISUALLY_LIST_COLOR_DESC">
+					<fieldset hidden="true" name="list_color_modal" repeat="true">
+						<field name="bg_color" type="color" label="MOD_SPECIAL_VISUALLY_BG_COLOR" description="MOD_SPECIAL_VISUALLY_BG_COLOR_DESC" default="#fff" />
+						<field name="text_color" type="color" label="MOD_SPECIAL_VISUALLY_TEXT_COLOR" description="MOD_SPECIAL_VISUALLY_TEXT_COLOR_DESC" default="#000" />
+					</fieldset>
+				</field>
+				<field name="note2" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_COLOR" description="MOD_SPECIAL_VISUALLY_CHANGE_COLOR_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры изображений -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_IMAGE">
+				<field name="change_image" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_IMAGE" description="MOD_SPECIAL_VISUALLY_CHANGE_IMAGE_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="note3" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_IMAGE" description="MOD_SPECIAL_VISUALLY_CHANGE_IMAGE_NOTE" />
+				<field name="grayscale_image" type="radio" label="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE" description="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DISABLE</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_AUTO</option>
+					<option value="2">MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_MANUAL</option>
+				</field>
+				<field name="note13" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE" description="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_NOTE" />
+				<field name="grayscale_image_default" type="radio" label="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DEFAULT" description="MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DEFAULT_DESC" default="cr">
+					<option value="cr">MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DEFAULT_CR</option>
+					<option value="bw">MOD_SPECIAL_VISUALLY_GRAYSCALE_IMAGE_DEFAULT_BW</option>
+				</field>
+				<field name="change_object" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_OBJECT" description="MOD_SPECIAL_VISUALLY_CHANGE_OBJECT_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="note16" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_OBJECT" description="MOD_SPECIAL_VISUALLY_CHANGE_OBJECT_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры кернинга -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_KERNING">
+				<field name="change_kerning" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_KERNING" description="MOD_SPECIAL_VISUALLY_CHANGE_KERNING_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="kerning_default" type="text" label="MOD_SPECIAL_VISUALLY_KERNING_DEFAULT" description="MOD_SPECIAL_VISUALLY_KERNING_DEFAULT_DESC" default="0px" />
+				<field name="type_kerning" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_KERNING" description="MOD_SPECIAL_VISUALLY_TYPE_KERNING_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_TYPE_KERNING_TEXT</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_TYPE_KERNING_IMAGE</option>
+				</field>
+				<field name="list_kerning" type="repeatable" icon="list" label="MOD_SPECIAL_VISUALLY_LIST_KERNING" description="MOD_SPECIAL_VISUALLY_LIST_KERNING_DESC">
+					<fieldset hidden="true" name="list_kerning_modal" repeat="true">
+						<field name="label_kerning" type="text" label="MOD_SPECIAL_VISUALLY_LABEL_KERNING" description="MOD_SPECIAL_VISUALLY_LABEL_KERNING_DESC" default="Кернинг 1" />
+						<field name="image_kerning" type="media" label="MOD_SPECIAL_VISUALLY_IMAGE_KERNING" description="MOD_SPECIAL_VISUALLY_IMAGE_KERNING_DESC" preview="true" preview_width="30" preview_height="30" />
+						<field name="size_kerning" type="text" label="MOD_SPECIAL_VISUALLY_SIZE_KERNING" description="MOD_SPECIAL_VISUALLY_SIZE_KERNING_DESC" default="0px" />
+					</fieldset>
+				</field>
+				<field name="note4" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_KERNING" description="MOD_SPECIAL_VISUALLY_CHANGE_KERNING_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры межестрочного интервала -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_INTERVAL">
+				<field name="change_interval" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_INTERVAL" description="MOD_SPECIAL_VISUALLY_CHANGE_INTERVAL_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="interval_default" type="text" label="MOD_SPECIAL_VISUALLY_INTERVAL_DEFAULT" description="MOD_SPECIAL_VISUALLY_INTERVAL_DEFAULT_DESC" default="24px" />
+				<field name="type_interval" type="radio" label="MOD_SPECIAL_VISUALLY_TYPE_INTERVAL" description="MOD_SPECIAL_VISUALLY_TYPE_INTERVAL_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_TYPE_INTERVAL_TEXT</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_TYPE_INTERVAL_IMAGE</option>
+				</field>
+				<field name="list_interval" type="repeatable" icon="list" label="MOD_SPECIAL_VISUALLY_LIST_INTERVAL" description="MOD_SPECIAL_VISUALLY_LIST_INTERVAL_DESC">
+					<fieldset hidden="true" name="list_interval_modal" repeat="true">
+						<field name="label_interval" type="text" label="MOD_SPECIAL_VISUALLY_LABEL_INTERVAL" description="MOD_SPECIAL_VISUALLY_LABEL_INTERVAL_DESC" default="Интервал 1" />
+						<field name="image_interval" type="media" label="MOD_SPECIAL_VISUALLY_IMAGE_INTERVAL" description="MOD_SPECIAL_VISUALLY_IMAGE_INTERVAL_DESC" preview="true" preview_width="30" preview_height="30" />
+						<field name="size_interval" type="text" label="MOD_SPECIAL_VISUALLY_SIZE_INTERVAL" description="MOD_SPECIAL_VISUALLY_SIZE_INTERVAL_DESC" default="0px" />
+					</fieldset>
+				</field>
+				<field name="note5" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_INTERVAL" description="MOD_SPECIAL_VISUALLY_CHANGE_INTERVAL_NOTE" />
+			</fieldset>
+			
+			<!-- Параметры гарнитуры -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_GARNITURA">
+				<field name="change_garnitura" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_GARNITURA" description="MOD_SPECIAL_VISUALLY_CHANGE_GARNITURA_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="garnitura_default" type="text" label="MOD_SPECIAL_VISUALLY_GARNITURA_DEFAULT" description="MOD_SPECIAL_VISUALLY_GARNITURA_DEFAULT_DESC" default="Arial, Helvetica, sans-serif" />
+				<field name="list_garnitura" type="repeatable" icon="list" label="MOD_SPECIAL_VISUALLY_LIST_GARNITURA" description="MOD_SPECIAL_VISUALLY_LIST_GARNITURA_DESC">
+					<fieldset hidden="true" name="list_garnitura_modal" repeat="true">
+						<field name="label_garnitura" type="text" label="MOD_SPECIAL_VISUALLY_LABEL_GARNITURA" description="MOD_SPECIAL_VISUALLY_LABEL_GARNITURA_DESC" default="Гарнитура 1" />
+						<field name="type_garnitura" type="text" label="MOD_SPECIAL_VISUALLY_TYPE_GARNITURA" description="MOD_SPECIAL_VISUALLY_TYPE_GARNITURA_DESC" default="Arial, Helvetica, sans-serif" />
+					</fieldset>
+				</field>
+				<field name="note6" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_GARNITURA" description="MOD_SPECIAL_VISUALLY_CHANGE_GARNITURA_NOTE" />
+			</fieldset>
+			
+			<!-- Расширенные параметры -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_EXTRA">
+				<field name="change_saver" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_SAVER" description="MOD_SPECIAL_VISUALLY_CHANGE_SAVER_DESC" default="1">
+					<option value="0">MOD_SPECIAL_VISUALLY_CHANGE_SAVER_COOKIES</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_CHANGE_SAVER_SESSIONS</option>
+				</field>
+				<field name="note8" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_SAVER" description="MOD_SPECIAL_VISUALLY_CHANGE_SAVER_NOTE" />
+				<field name="hidden_elements" type="textarea" label="MOD_SPECIAL_VISUALLY_HIDDEN_ELEMENTS" description="MOD_SPECIAL_VISUALLY_HIDDEN_ELEMENTS_DESC" rows="8" cols="20" />
+				<field name="note11" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_HIDDEN_ELEMENTS" description="MOD_SPECIAL_VISUALLY_HIDDEN_ELEMENTS_NOTE" />
+				<field name="exclude_elements" type="textarea" label="MOD_SPECIAL_VISUALLY_EXCLUDE_ELEMENTS" description="MOD_SPECIAL_VISUALLY_EXCLUDE_ELEMENTS_DESC" rows="8" cols="20" />
+				<field name="note9" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_EXCLUDE_ELEMENTS" description="MOD_SPECIAL_VISUALLY_EXCLUDE_ELEMENTS_NOTE" />
+				<field name="process_image" type="textarea" label="MOD_SPECIAL_VISUALLY_PROCESS_IMAGE" description="MOD_SPECIAL_VISUALLY_PROCESS_IMAGE_DESC" rows="8" cols="20" />
+				<field name="note10" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_PROCESS_IMAGE" description="MOD_SPECIAL_VISUALLY_PROCESS_IMAGE_NOTE" />
+				<field name="custom_styles" type="textarea" label="MOD_SPECIAL_VISUALLY_CUSTOM_STYLES" description="MOD_SPECIAL_VISUALLY_CUSTOM_STYLES_DESC" rows="8" cols="20" />
+				<field name="custom_button" type="radio" label="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON" description="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_button_selector" type="text" label="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON_SELECTOR" description="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON_SELECTOR_DESC" default="" />
+				<field name="note12" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON" description="MOD_SPECIAL_VISUALLY_CUSTOM_BUTTON_NOTE" />
+				<field name="start_active" type="radio" label="MOD_SPECIAL_VISUALLY_START_ACTIVE" description="MOD_SPECIAL_VISUALLY_START_ACTIVE_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="allow_underline" type="radio" label="MOD_SPECIAL_VISUALLY_ALLOW_UNDERLINE" description="MOD_SPECIAL_VISUALLY_ALLOW_UNDERLINE_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			
+			<!-- Экспериментальные настройки -->
+			<fieldset name="MOD_SPECIAL_VISUALLY_EXPERT">
+				<field name="note7" type="note" class="alert alert-error" label="MOD_SPECIAL_VISUALLY_EXPERT" description="MOD_SPECIAL_VISUALLY_EXPERT_NOTE" />
+				<field name="change_sound" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_SOUND" description="MOD_SPECIAL_VISUALLY_CHANGE_SOUND_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="sound_api" type="text" label="MOD_SPECIAL_VISUALLY_SOUND_API" description="MOD_SPECIAL_VISUALLY_SOUND_API_DESC" default="" />
+				<field name="height_speaker" type="number" min="0" max="2" step="0.1" label="MOD_SPECIAL_VISUALLY_HEIGHT_SPEAKER" description="MOD_SPECIAL_VISUALLY_HEIGHT_SPEAKER_DESC" default="1.0" />
+				<field name="speed_speaker" type="number" min="0" max="1.5" step="0.1" label="MOD_SPECIAL_VISUALLY_SPEED_SPEAKER" description="MOD_SPECIAL_VISUALLY_SPEED_SPEAKER_DESC" default="1.0" />
+				<field name="volume_speaker" type="number" min="0.0" max="1.0" step="0.1" label="MOD_SPECIAL_VISUALLY_VOLUME_SPEAKER" description="MOD_SPECIAL_VISUALLY_VOLUME_SPEAKER_DESC" default="1.0" />
+				<field name="change_speaker" type="radio" label="MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER" description="MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER_DESC" default="Russian Female">
+					<option value="UK English Female">MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER_ENGLISHF</option>
+					<option value="UK English Male">MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER_ENGLISHM</option>
+					<option value="Russian Female">MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER_RUSSIANF</option>
+					<option value="Russian Male">MOD_SPECIAL_VISUALLY_CHANGE_SPEAKER_RUSSIANM</option>
+				</field>
+				<field name="note11" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_CHANGE_SOUND" description="MOD_SPECIAL_VISUALLY_CHANGE_SOUND_NOTE" />
+				<field name="sound_method" type="radio" label="MOD_SPECIAL_VISUALLY_SOUND_METHOD" description="MOD_SPECIAL_VISUALLY_SOUND_METHOD_DESC" default="0">
+					<option value="0">MOD_SPECIAL_VISUALLY_SOUND_METHOD_BUTTON</option>
+					<option value="1">MOD_SPECIAL_VISUALLY_SOUND_METHOD_BORDER</option>
+				</field>
+				<field name="note17" type="note" class="alert alert-info" label="MOD_SPECIAL_VISUALLY_SOUND_METHOD" description="MOD_SPECIAL_VISUALLY_SOUND_METHOD_NOTE" />
+				
+				<field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1" filter="integer">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="note15" type="note" class="alert alert-error" label="MOD_SPECIAL_VISUALLY_CACHING_MODULE" description="MOD_SPECIAL_VISUALLY_CACHING_MODULE_NOTE" />
+			</fieldset>
+			
+			<!-- Дополнительные параметры для модуля -->
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_special_visually.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_special_visually.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_special_visually.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_special_visually.sys.ini</language>
+	</languages>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Module Special Visually">http://blog-about.ru/update/mod_special_visually_update.xml</server>
+	</updateservers>
+</extension>

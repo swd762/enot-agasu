@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/administrator/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/components" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/help" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/includes" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/language" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/administrator/modules" />
+      <excludeFolder url="file://$MODULE_DIR$/bin" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

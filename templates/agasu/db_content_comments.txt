@@ -1,0 +1,11 @@
+чтобы удалить, в mysql ini добавляем
+[mysqld]
+sql-mode="NO_ENGINE_SUBSTITUTION"
+
+
+при копировании из старой версии в новой, удалять столбцы у старой таблицы
+
+title_alias
+secondid
+mask
+parentid

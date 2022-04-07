@@ -1,0 +1,69 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="825.188" height="587.75" viewBox="0 0 825.188 587.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f9bd6;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #63bbeb;
+      }
+
+      .cls-3 {
+        fill: #3271b7;
+      }
+
+      .cls-4 {
+        fill: #b2dcf4;
+      }
+
+      .cls-5 {
+        fill: #3782c4;
+      }
+
+      .cls-6 {
+        fill: #5eb1e3;
+      }
+
+      .cls-7 {
+        fill: #aad9f2;
+      }
+
+      .cls-8 {
+        fill: #b7e0f0;
+      }
+
+      .cls-9 {
+        fill: #388ccb;
+      }
+
+      .cls-10 {
+        fill: #41ade4;
+      }
+
+      .cls-11 {
+        fill: #3fa0db;
+      }
+
+      .cls-12 {
+        fill: #68beea;
+      }
+    </style>
+  </defs>
+  <path id="Многоугольник_1" data-name="Многоугольник 1" class="cls-1" d="M500.6,393.763L407.721,217.637H593.472Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_3" data-name="Многоугольник 1 копия 3" class="cls-2" d="M500.6,428.221L407.721,604.348H593.472Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_8" data-name="Многоугольник 1 копия 8" class="cls-3" d="M180.889,629.235L88.014,805.361H273.765Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_9" data-name="Многоугольник 1 копия 9" class="cls-4" d="M820.3,629.235L727.428,805.361H913.179Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_4" data-name="Многоугольник 1 копия 4" class="cls-5" d="M288.1,428.221L195.221,604.348H380.972Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_6" data-name="Многоугольник 1 копия 6" class="cls-6" d="M288.1,795.79L195.221,619.664H380.972Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_5" data-name="Многоугольник 1 копия 5" class="cls-7" d="M713.1,428.221L620.221,604.348H805.972Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_7" data-name="Многоугольник 1 копия 7" class="cls-8" d="M713.1,795.79L620.221,619.664H805.972Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1-2" data-name="Многоугольник 1" class="cls-9" d="M393.389,227.208L300.514,403.334H486.265Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1-3" data-name="Многоугольник 1" class="cls-10" d="M607.8,227.208L514.928,403.334H700.679Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия" data-name="Многоугольник 1 копия" class="cls-11" d="M393.389,594.777L300.514,418.651H486.265Z" transform="translate(-88 -217.625)"/>
+  <path id="Многоугольник_1_копия_2" data-name="Многоугольник 1 копия 2" class="cls-12" d="M607.8,594.777L514.928,418.651H700.679Z" transform="translate(-88 -217.625)"/>
+</svg>
